@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Background: Deep Andalusian Green -->
+  <rect width="512" height="512" rx="120" fill="#0b1f1a" />
+  
+  <!-- Subtle Astrolabe/Geometric Background (Islamic Astronomy theme) -->
+  <circle cx="256" cy="256" r="230" fill="none" stroke="#d4af37" stroke-width="1.5" opacity="0.12" />
+  <circle cx="256" cy="256" r="200" fill="none" stroke="#d4af37" stroke-width="1" stroke-dasharray="8 8" opacity="0.18" />
+  <circle cx="256" cy="256" r="160" fill="none" stroke="#d4af37" stroke-width="1" opacity="0.1" />
+  
+  <!-- Radiating astrolabe lines -->
+  <line x1="256" y1="26" x2="256" y2="486" stroke="#d4af37" stroke-width="0.8" opacity="0.12" />
+  <line x1="26" y1="256" x2="486" y2="256" stroke="#d4af37" stroke-width="0.8" opacity="0.12" />
+  <line x1="93" y1="93" x2="419" y2="419" stroke="#d4af37" stroke-width="0.8" opacity="0.08" />
+  <line x1="93" y1="419" x2="419" y2="93" stroke="#d4af37" stroke-width="0.8" opacity="0.08" />
+
+  <!-- Outer Horseshoe Arch Outline -->
+  <path d="M120 376 A 150 150 0 1 1 392 376" fill="none" stroke="#d4af37" stroke-width="2" opacity="0.2" />
+
+  <!-- Main Motif Group (Centered) -->
+  <g transform="translate(10, 0)">
+    <!-- 1. The Creative Crescent (Hilal) in Gold -->
+    <!-- Bulges left, cradling the star on the right -->
+    <path d="M260,130 A126,126 0 0,0 260,382 A145,145 0 0,1 260,130 Z" fill="#d4af37" stroke="#ffffff" stroke-width="1" />
+    
+    <!-- Delicate filigree dots inside the crescent -->
+    <circle cx="210" cy="190" r="3" fill="#0b1f1a" />
+    <circle cx="185" cy="225" r="4" fill="#0b1f1a" />
+    <circle cx="178" cy="256" r="4.5" fill="#0b1f1a" />
+    <circle cx="185" cy="287" r="4" fill="#0b1f1a" />
+    <circle cx="210" cy="322" r="3" fill="#0b1f1a" />
+
+    <!-- 2. The Nestled Rub el Hizb (8-Pointed Star Rosette) -->
+    <!-- Positioned in the cradle of the crescent (centered around x=320, y=256) -->
+    <g transform="translate(320, 256)">
+      <!-- Outer gold star -->
+      <rect x="-42" y="-42" width="84" height="84" fill="#d4af37" stroke="#ffffff" stroke-width="1" transform="rotate(0)" />
+      <rect x="-42" y="-42" width="84" height="84" fill="#d4af37" stroke="#ffffff" stroke-width="1" transform="rotate(45)" />
+      
+      <!-- Inner terracotta zillij tile -->
+      <rect x="-33" y="-33" width="66" height="66" fill="#8c3b2b" stroke="#e9c46a" stroke-width="1" transform="rotate(22.5)" />
+      <rect x="-33" y="-33" width="66" height="66" fill="#8c3b2b" stroke="#e9c46a" stroke-width="1" transform="rotate(67.5)" />
+      
+      <!-- Core star circle -->
+      <circle cx="0" cy="0" r="23" fill="#0b1f1a" stroke="#d4af37" stroke-width="1.5" />
+      
+      <!-- Center gold dot -->
+      <circle cx="0" cy="0" r="6" fill="#ffffff" />
+    </g>
+
+    <!-- Sparkles radiating from the star -->
+    <circle cx="320" cy="190" r="2" fill="#d4af37" opacity="0.6" />
+    <circle cx="380" cy="220" r="2.5" fill="#d4af37" opacity="0.8" />
+    <circle cx="390" cy="256" r="3" fill="#ffffff" />
+    <circle cx="380" cy="292" r="2.5" fill="#d4af37" opacity="0.8" />
+    <circle cx="320" cy="322" r="2" fill="#d4af37" opacity="0.6" />
+  </g>
+
+  <!-- Elegant Islamic/Andalusian Corner Ornaments -->
+  <!-- Top Left -->
+  <path d="M40 40 L80 40 A 40 40 0 0 1 40 80 Z" fill="#d4af37" opacity="0.4" />
+  <circle cx="55" cy="55" r="5" fill="#ffffff" opacity="0.6" />
+  <!-- Top Right -->
+  <path d="M472 40 L432 40 A 40 40 0 0 0 472 80 Z" fill="#d4af37" opacity="0.4" />
+  <circle cx="457" cy="55" r="5" fill="#ffffff" opacity="0.6" />
+  <!-- Bottom Left -->
+  <path d="M40 472 L80 472 A 40 40 0 0 0 40 432 Z" fill="#d4af37" opacity="0.4" />
+  <circle cx="55" cy="457" r="5" fill="#ffffff" opacity="0.6" />
+  <!-- Bottom Right -->
+  <path d="M472 472 L432 472 A 40 40 0 0 1 472 432 Z" fill="#d4af37" opacity="0.4" />
+  <circle cx="457" cy="457" r="5" fill="#ffffff" opacity="0.6" />
+</svg>
