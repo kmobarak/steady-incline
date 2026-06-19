@@ -1,10 +1,11 @@
 // Aura (الأثر) - PWA Service Worker
-const CACHE_NAME = 'aura-cache-v5';
+const CACHE_NAME = 'aura-cache-v6';
 const ASSETS = [
   './',
   './index.html',
   './styles.css',
   './app.js',
+  './quiz.js',
   './data.js',
   './manifest.json',
   './icon.png?v=4',

@@ -190,6 +190,17 @@
       </div>
 
       <div class="glass-card" style="margin-top: 20px;">
+        <h3 style="margin-bottom: 14px;">AI Settings</h3>
+        <div class="form-group">
+          <label for="setting-api-key">Gemini API Key</label>
+          <input type="password" id="setting-api-key" class="form-input" placeholder="Paste your Gemini API key here" onchange="saveApiKey(this.value)">
+          <p style="font-size: 0.75rem; color: var(--theme-text-muted); margin-top: 6px; line-height: 1.3;">
+            Your key is saved locally in your browser and never sent anywhere except directly to Google's Gemini API.
+          </p>
+        </div>
+      </div>
+
+      <div class="glass-card" style="margin-top: 20px;">
         <h3 style="margin-bottom: 12px;">Add to iPhone Home Screen</h3>
         <div class="ios-instructions">
           <p style="font-size: 0.9rem; line-height: 1.4; color: var(--theme-text-muted); margin-bottom: 8px;">
@@ -223,6 +234,100 @@
       </div>
     </div>
 
+    <!-- ==================== SCREEN 5: WEEKLY QUIZ ==================== -->
+    <div id="screen-quiz" class="app-screen" style="display: none;">
+      <h2 style="margin-bottom: 8px;">Weekly Intellect Quiz</h2>
+      <p style="color: var(--theme-text-muted); font-size: 0.9rem; margin-bottom: 24px; line-height: 1.4;">
+        Test and solidify your understanding of concepts, quotes, and books from your rotation.
+      </p>
+
+      <!-- Quiz Screen State 1: Key Missing -->
+      <div id="quiz-state-setup" class="glass-card text-center" style="display: none;">
+        <div style="font-size: 3rem; margin-bottom: 16px;">🔑</div>
+        <h3>Gemini API Key Required</h3>
+        <p style="font-size: 0.9rem; color: var(--theme-text-muted); margin: 12px 0 20px; line-height: 1.5;">
+          The weekly quiz uses Google's Gemini AI to dynamically create questions and check your answers. Obtain a free key from Google AI Studio and enter it in Settings.
+        </p>
+        <button onclick="switchTab('settings')" class="btn-primary">Go to Settings</button>
+      </div>
+
+      <!-- Quiz Screen State 2: Locked (Cooldown) -->
+      <div id="quiz-state-locked" class="glass-card text-center" style="display: none;">
+        <div class="lock-icon" style="font-size: 3.5rem; margin-bottom: 16px;">⏳</div>
+        <h3 id="quiz-locked-title">Quiz Completed!</h3>
+        <p style="font-size: 0.9rem; color: var(--theme-text-muted); margin: 12px 0 20px; line-height: 1.5;" id="quiz-locked-message">
+          Your weekly quiz has been graded. The next intellectual challenge will unlock in 7 days.
+        </p>
+        <div id="quiz-locked-countdown" style="font-size: 1.2rem; font-weight: 600; color: var(--theme-accent); margin-bottom: 24px;"></div>
+        <button onclick="startPracticeQuiz()" class="btn-primary" style="background: transparent; border: 1px solid var(--theme-accent); color: var(--theme-accent);">Start Practice Quiz Instead</button>
+      </div>
+
+      <!-- Quiz Screen State 3: Ready / Welcome -->
+      <div id="quiz-state-ready" class="glass-card text-center" style="display: none;">
+        <div style="font-size: 3.5rem; margin-bottom: 16px;">🧠</div>
+        <h3>Ready for your Weekly Challenge?</h3>
+        <p style="font-size: 0.9rem; color: var(--theme-text-muted); margin: 12px 0 24px; line-height: 1.5;">
+          A custom challenge based on your readings: explain a concept, guess an author, or reflect on a quote.
+        </p>
+        <button onclick="generateQuizQuestion('weekly')" class="btn-primary">Start Weekly Quiz</button>
+      </div>
+
+      <!-- Quiz Screen State 4: Active Question -->
+      <div id="quiz-state-active" class="glass-card" style="display: none;">
+        <div id="quiz-question-type" class="quiz-badge">Guess the Author</div>
+        
+        <div id="quiz-question-content" style="margin: 20px 0; font-family: 'Playfair Display', serif; font-size: 1.25rem; line-height: 1.5; color: var(--theme-text-main);">
+          <!-- Dynamic Question text -->
+        </div>
+
+        <form id="quiz-submit-form" onsubmit="submitQuizAnswer(event)">
+          <div class="form-group">
+            <label for="quiz-user-answer">Your Explanation / Response</label>
+            <textarea id="quiz-user-answer" class="form-textarea" required placeholder="Write your thoughts here..." style="min-height: 120px;"></textarea>
+          </div>
+          <div style="display: flex; gap: 12px; margin-top: 16px;">
+            <button type="button" onclick="cancelQuiz()" class="btn-primary" style="background: transparent; border: 1px solid var(--theme-text-muted); color: var(--theme-text-muted); flex: 1;">Cancel</button>
+            <button type="submit" class="btn-primary" style="flex: 2;">Submit Response</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Quiz Screen State 5: Loading -->
+      <div id="quiz-state-loading" class="glass-card text-center" style="display: none;">
+        <div class="loading-spinner" style="margin: 32px auto 16px;"></div>
+        <h3>Gemini is grading your response...</h3>
+        <p style="font-size: 0.85rem; color: var(--theme-text-muted); margin-top: 8px;">
+          Evaluating philosophical depth, clarity, and historical context.
+        </p>
+      </div>
+
+      <!-- Quiz Screen State 6: Feedback / Result -->
+      <div id="quiz-state-result" class="glass-card" style="display: none;">
+        <h3 id="quiz-result-title" style="margin-bottom: 12px;">Evaluation Results</h3>
+        
+        <div class="quiz-score-container" style="margin-bottom: 20px;">
+          <div id="quiz-score-stars" style="font-size: 1.8rem; color: #ffd700; margin-bottom: 4px;">⭐⭐⭐⭐⭐</div>
+          <div id="quiz-score-text" style="font-size: 0.9rem; font-weight: 500; color: var(--theme-text-muted);">Score: 5 / 5</div>
+        </div>
+
+        <div class="feedback-section" style="margin-bottom: 20px;">
+          <h4 style="margin-bottom: 6px; font-size: 0.95rem;">Tutor Critique:</h4>
+          <p id="quiz-feedback-text" style="font-size: 0.9rem; line-height: 1.5; color: var(--theme-text-main); background: rgba(255,255,255,0.05); padding: 12px; border-radius: 8px; border: 1px solid var(--theme-card-border);">
+            <!-- Dynamic critique -->
+          </p>
+        </div>
+
+        <div class="ideal-section" style="margin-bottom: 24px;">
+          <h4 style="margin-bottom: 6px; font-size: 0.95rem;">Reference Answer / Context:</h4>
+          <p id="quiz-ideal-text" style="font-size: 0.9rem; line-height: 1.5; color: var(--theme-text-muted);">
+            <!-- Dynamic ideal answer -->
+          </p>
+        </div>
+
+        <button onclick="finishQuiz()" class="btn-primary" style="width: 100%;">Done</button>
+      </div>
+    </div>
+
     <!-- ==================== FAVORITES DRAWER ==================== -->
     <div id="drawer-favorites-overlay" class="drawer-overlay" onclick="closeDrawer('drawer-favorites')"></div>
     <div id="drawer-favorites" class="drawer">
@@ -246,6 +351,10 @@
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
         <span>Daily</span>
       </button>
+      <button class="nav-item" id="nav-quiz" onclick="switchTab('quiz')" aria-label="Weekly Quiz screen">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+        <span>Quiz</span>
+      </button>
       <button class="nav-item" id="nav-library" onclick="switchTab('library')" aria-label="Library screen">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
         <span>Library</span>
@@ -264,6 +373,7 @@
 
   <!-- Scripts -->
   <script src="data.js"></script>
+  <script src="quiz.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

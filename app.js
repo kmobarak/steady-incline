@@ -16,6 +16,9 @@ let state = {
   favorites: [], // Array of favorite items
   customQuotes: [], // User added quotes
   customBooks: [], // User added books
+  apiKey: null,
+  quizHistory: [],
+  lastQuizDate: null, // timestamp or YYYY-MM-DD
   settings: {
     themeMode: 'dynamic' // dynamic, morning, evening
   }
@@ -103,6 +106,9 @@ function initStorage() {
       state.favorites = state.favorites || [];
       state.customQuotes = state.customQuotes || [];
       state.customBooks = state.customBooks || [];
+      state.apiKey = state.apiKey || null;
+      state.quizHistory = state.quizHistory || [];
+      state.lastQuizDate = state.lastQuizDate || null;
     } catch (e) {
       console.error("Failed to parse storage, using defaults", e);
     }
@@ -632,6 +638,10 @@ window.switchTab = function(tabName) {
   // Render specific states
   if (tabName === 'library') {
     renderLibrary();
+  } else if (tabName === 'quiz') {
+    if (typeof updateQuizView === 'function') {
+      updateQuizView();
+    }
   }
 };
 
@@ -643,6 +653,15 @@ window.changeThemeMode = function(mode) {
   
   // Re-render quote because tab backgrounds changes based on theme
   renderQuote();
+};
+
+window.saveApiKey = function(value) {
+  state.apiKey = value ? value.trim() : null;
+  saveState();
+  // If the user goes back to the Quiz tab, update the view state.
+  if (typeof updateQuizView === 'function') {
+    updateQuizView();
+  }
 };
 
 window.resetAllData = function() {
@@ -680,6 +699,12 @@ function setupEventListeners() {
     themeSelect.addEventListener('change', (e) => {
       changeThemeMode(e.target.value);
     });
+  }
+
+  // Populate API key if saved
+  const apiKeyInput = document.getElementById('setting-api-key');
+  if (apiKeyInput && state.apiKey) {
+    apiKeyInput.value = state.apiKey;
   }
 }
 
