@@ -609,6 +609,111 @@ const DAILY_SPARKS = [
     title: "Al-Ghazali on Self-Knowledge (Ma'rifah)",
     content: "Al-Ghazali stated: 'He who knows himself knows his Lord.' He argued that self-knowledge is not just knowing your name and physical attributes, but understanding your spiritual essence: what are you, where did you come from, what is your purpose, and wherein lies your true happiness and misery.",
     source: "Kimiya-yi Sa'adat"
+  },
+  {
+    id: 31,
+    category: "Cosmology & Space",
+    title: "The Cosmic Microwave Background (CMB)",
+    content: "The Cosmic Microwave Background (CMB) is the oldest light in the universe, emitted when the cosmos was just 380,000 years old. Before this epoch (known as Recombination), the universe was a hot, dense plasma of electrons and protons that trapped light. As the universe cooled, neutral hydrogen formed, allowing photons to travel freely for the first time. Today, this relic radiation is stretched into microwaves by cosmic expansion, acting as a nearly uniform thermal footprint at 2.73 Kelvin. Discovered accidentally in 1964, tiny fluctuations (anisotropies) in the CMB provide astronomers with a baby picture of the universe, revealing density perturbations that later collapsed to form all stars, galaxies, and cosmic structures.",
+    source: "Astrophysics and the Early Universe"
+  },
+  {
+    id: 32,
+    category: "Quantum Physics",
+    title: "Wave-Particle Duality & The Double-Slit Experiment",
+    content: "One of the most profound revelations of quantum mechanics is that matter and light exhibit behaviors of both waves and particles depending on how they are measured. In the famous Double-Slit Experiment, when particles like electrons or photons are fired at a barrier with two slits, they form an interference pattern of bands on a detection screen, indicating they behave like waves traveling through both slits simultaneously. However, if a measurement device is placed at the slits to observe which slit each particle passes through, the wave function collapses, the interference pattern disappears, and the particles behave like classical, localized bullets forming two simple lines. This 'Observer Effect' challenges classical determinism and suggests that the act of observation fundamentally changes physical reality.",
+    source: "The Principles of Quantum Mechanics"
+  },
+  {
+    id: 33,
+    category: "Astrophysics & Space",
+    title: "Black Hole Thermodynamics & Hawking Radiation",
+    content: "Black holes are regions of spacetime where gravity is so intense that nothing, not even light, can escape past the boundary known as the event horizon. According to classical General Relativity, black holes are eternal traps. However, in 1974, Stephen Hawking combined quantum field theory with relativity and discovered that black holes can emit thermal radiation. Near the event horizon, virtual particle-antiparticle pairs constantly pop into existence due to quantum vacuum fluctuations. Normally they annihilate immediately. But if one falls into the black hole while the other escapes, the escaping particle appears as emitted radiation. Since energy must be conserved, the black hole loses mass. Over vast astronomical timescales, black holes slowly evaporate and eventually explode, revealing a deep connection between quantum mechanics, thermodynamics, and gravity.",
+    source: "A Brief History of Time"
+  },
+  {
+    id: 34,
+    category: "Cosmology & Astrophysics",
+    title: "The Expansion of the Universe & Dark Energy",
+    content: "In 1929, Edwin Hubble observed that light from distant galaxies is redshifted, meaning they are moving away from us at speeds proportional to their distance. This established Hubble's Law and proved that space itself is expanding. For decades, physicists assumed gravity would eventually slow this expansion down. However, in 1998, two independent teams measuring distant Type Ia supernovae discovered that the universe's expansion is not slowing, but accelerating. To explain this, scientists proposed 'Dark Energy'—a smooth, repulsive force that permeates all space. Represented by Einstein's Cosmological Constant, Dark Energy makes up roughly 68% of the universe's energy density. Its true nature remains one of the greatest mysteries in physics, determining the ultimate fate of the cosmos (e.g., the 'Big Freeze' or 'Big Rip').",
+    source: "Physical Cosmology"
+  },
+  {
+    id: 35,
+    category: "Molecular Biology",
+    title: "The Central Dogma of Molecular Biology",
+    content: "Formulated by Francis Crick in 1958, the Central Dogma explains the flow of genetic information within a biological system. It states that information is stored in DNA, transcribed into messenger RNA (mRNA), and then translated into proteins: DNA → RNA → Protein. Transcription occurs inside the cell nucleus, where an RNA copy is synthesized from a DNA template. This mRNA then travels to the ribosome, where translation occurs. The ribosome reads the mRNA in triplets of nucleotides (codons), matching them to specific amino acids brought by transfer RNA (tRNA) to build a polypeptide chain. Proteins then fold into complex 3D structures that perform structural, enzymatic, and regulatory functions. While some exceptions exist (like retroviruses transcribing RNA back to DNA), this dogma forms the universal operating system for all life on Earth.",
+    source: "Molecular Biology of the Gene"
+  },
+  {
+    id: 36,
+    category: "Evolutionary History & Paleontology",
+    title: "The Cambrian Explosion",
+    content: "Occurring approximately 541 million years ago, the Cambrian Explosion is a relatively brief geological period of about 20-25 million years during which most major animal phyla suddenly appeared in the fossil record. Prior to this event, life on Earth was dominated by simple unicellular organisms and soft-bodied multicellular creatures (the Ediacaran biota). The Cambrian period saw the rapid evolution of complex body plans, specialized organs, hard shells, compound eyes, and appendages. Famous fossil deposits like the Burgess Shale in Canada preserve bizarre creatures like Anomalocaris (an early apex predator) and Trilobites. Theories for this evolutionary burst include rising atmospheric oxygen levels, the development of the ozone layer shielding life from UV radiation, the genetic revolution of Hox genes regulating body plans, and the ecological feedback loop of predator-prey dynamics.",
+    source: "The Ancestor's Tale"
+  },
+  {
+    id: 37,
+    category: "History of Science",
+    title: "The House of Wisdom (Bayt al-Hikma)",
+    content: "During the Islamic Golden Age (8th to 13th centuries), Baghdad was the intellectual capital of the world, centered around the House of Wisdom. Founded by Caliph Harun al-Rashid and expanded by al-Ma'mun, it served as an academy, library, and translation bureau. Scholars of diverse religious backgrounds (Muslims, Christians, Jews, and Sabians) gathered to translate Greek, Persian, Indian, and Syriac texts into Arabic. This monumental 'Translation Movement' preserved classical knowledge (like Aristotle and Euclid) and laid the foundation for modern science. Scholars like al-Khwarizmi developed algebra (from 'al-jabr'), al-Kindi integrated Greek philosophy, and Ibn al-Haytham (Alhazen) revolutionized optics, pioneering the modern empirical scientific method through rigorous experimentation.",
+    source: "The House of Wisdom: How Arabic Science Saved Ancient Knowledge"
+  },
+  {
+    id: 38,
+    category: "World History",
+    title: "The Silk Road & Global Integration",
+    content: "The Silk Road was not a single highway, but an ancient network of maritime and overland trade routes spanning from East Asia to the Mediterranean, active from the Han Dynasty (130 BCE) until the Ottoman Empire's rise. It facilitated the exchange of luxury goods like Chinese silk, porcelain, Indian spices, and Roman glassware. More importantly, it was a conduit for the transmission of culture, technology, religion, and disease. Buddhism traveled from India to China, and Islam spread across Central Asia. Technologies like paper-making, printing, gunpowder, and the compass moved west, transforming European history. However, it also acted as a vector for pathogens; the Black Death (bubonic plague) traveled along these trade routes in the 14th century, wiping out a third of the Eurasian population and altering socio-economic structures.",
+    source: "The Silk Roads: A New History of the World"
+  },
+  {
+    id: 39,
+    category: "Historiography & Sociology",
+    title: "Ibn Khaldun's Concept of 'Asabiyyah'",
+    content: "In his monumental 1377 work, the *Muqaddimah*, Ibn Khaldun pioneered the fields of sociology, historiography, and economics. Central to his cycle of history is the concept of 'Asabiyyah'—often translated as social cohesion, group solidarity, or collective consciousness. Ibn Khaldun argued that history moves in cycles driven by the clash between nomadic and sedentary societies. Nomadic tribes possess strong 'Asabiyyah' due to harsh desert life and mutual dependence. This solidarity allows them to conquer weakened, sedentary empires. However, once established, the new rulers adopt luxurious urban lifestyles, causing their 'Asabiyyah' to decay over generations. Within about 120 years (three generations), the empire becomes corrupt and weak, leaving it vulnerable to conquest by a new group with stronger group solidarity.",
+    source: "المقدمة (Al-Muqaddimah)"
+  },
+  {
+    id: 40,
+    category: "History of Mathematics",
+    title: "The Invention and Philosophy of Zero",
+    content: "The mathematical concept of zero evolved through two stages: first as a placeholder, and later as a number in its own right. Ancient Babylonians, Mayans, and Greeks used empty spaces or symbols to denote the absence of a value in positional notation (e.g., distinguishing 105 from 15). However, the mathematical definition of zero as a number with arithmetic rules occurred in India. Around 628 CE, the mathematician Brahmagupta wrote the *Brahmasphutasiddhanta*, establishing rules for adding, subtracting, and multiplying with zero (though division by zero remained unsolved). The concept was integrated into the decimal place-value system, translated into Arabic as 'sifr' (meaning empty), and transmitted to Europe via North Africa by Fibonacci. Zero revolutionized mathematics, enabling the development of calculus, negative numbers, and binary computer logic.",
+    source: "The Nothing That Is: A Natural History of Zero"
+  },
+  {
+    id: 41,
+    category: "Astrophysics & Space",
+    title: "Stellar Nucleosynthesis: How Starstuff is Forged",
+    content: "Immediately after the Big Bang, the universe contained only hydrogen, helium, and trace amounts of lithium. All heavier elements on the periodic table—such as the carbon in our cells, the oxygen we breathe, and the iron in our blood—were forged through nuclear fusion inside stars, a process known as stellar nucleosynthesis. Stars spend most of their lives fusing hydrogen into helium. As massive stars age and exhaust their fuel, their cores contract and heat up, enabling the fusion of heavier elements like carbon, neon, oxygen, and silicon. This process stops at iron, as fusing iron consumes energy rather than releasing it. When massive stars collapse and explode in spectacular supernovae, or when dense neutron stars collide, they release massive amounts of energy that forge elements heavier than iron, scattering them across space to seed future planets and life.",
+    source: "Stellar Structure and Evolution"
+  },
+  {
+    id: 42,
+    category: "Modern European History",
+    title: "The Peace of Westphalia (1648)",
+    content: "The Peace of Westphalia consists of a series of peace treaties signed in 1648 in the Westphalian cities of Münster and Osnabrück. It brought an end to the Thirty Years' War in the Holy Roman Empire (a brutal conflict that decimated Central Europe) and the Eighty Years' War between Spain and the Dutch Republic. The treaties established the principle of Westphalian Sovereignty—the idea that national governments have exclusive sovereignty over their territory, and that foreign powers should not interfere in another state's domestic affairs. It recognized the right of rulers to determine the religion of their state, legally established the equality of sovereign states, and laid the structural foundation for the modern international system of nation-states, international law, and global diplomacy.",
+    source: "The Thirty Years War: Europe's Tragedy"
+  },
+  {
+    id: 43,
+    category: "Cosmology & Astrobiology",
+    title: "The Fermi Paradox & The Great Filter",
+    content: "The Fermi Paradox is the apparent contradiction between the high mathematical probability of the existence of extraterrestrial civilizations and the complete lack of contact or evidence of their existence. Our galaxy, the Milky Way, contains billions of stars similar to our Sun, many billions of years older than Earth. If Earth-like planets are common and life is an inevitable outcome, intelligent civilizations should have developed, colonized the galaxy, and made their presence known. To explain this silence, Robin Hanson proposed the 'Great Filter' hypothesis. It suggests there is an incredibly difficult evolutionary barrier (a filter) that prevents life from progressing to interstellar colonization. This filter could lie in our past (e.g., the transition from unicellular to multicellular life is rare) or in our future (e.g., advanced civilizations inevitably destroy themselves with technology).",
+    source: "The Fermi Paradox: Search for Extraterrestrial Intelligence"
+  },
+  {
+    id: 44,
+    category: "Cognitive Science & Philosophy",
+    title: "The Hard Problem of Consciousness",
+    content: "Philosopher David Chalmers coined the term 'The Hard Problem of Consciousness' to distinguish it from the 'easy problems' of cognitive science. The 'easy' problems involve explaining how the brain processes environmental stimuli, integrates information, regulates sleep, or controls behavior. While technically complex, these can be explained by neurobiology and physical mechanisms. The 'hard' problem, however, is explaining *why* and *how* these physical, electrochemical processes in the brain give rise to subjective, first-person experiences (qualia)—such as the vibrant redness of a rose, the feeling of pain, or the taste of chocolate. It questions why we are not merely 'philosophical zombies'—creatures that behave exactly like humans but have no inner subjective experience.",
+    source: "The Conscious Mind: In Search of a Fundamental Theory"
+  },
+  {
+    id: 45,
+    category: "Classical History",
+    title: "The Library of Alexandria",
+    content: "Founded around 285 BCE in Egypt by the Ptolemaic dynasty following Alexander the Great's conquests, the Great Library of Alexandria was the ancient world's largest repository of knowledge. Its goal was to collect 'all the books of all the peoples of the world.' It functioned as a research institution where legendary scholars like Eratosthenes (who calculated the Earth's circumference), Euclid (the father of geometry), and Aristarchus (who proposed a heliocentric model) studied. The popular myth is that the library was destroyed in a single, catastrophic fire set by Julius Caesar in 48 BCE. In reality, the library suffered a slow, centuries-long decline caused by budget cuts, religious riots, political instability, and neglect, demonstrating that the loss of civilizations and knowledge is often a gradual process of decay rather than a single sudden event.",
+    source: "The Library of Alexandria: Centre of Learning in the Ancient World"
   }
 ];
 
